@@ -67,7 +67,7 @@ function Navbar() {
           </button>
         </div>
         <div className="hidden lg:flex items-center ml-auto space-x-5">
-          <Popover className="relative">
+          <Popover className="relative hover:shadow-xl transition-all rounded-full">
             {({ open }) => (
               <>
                 <Popover.Button className="flex items-center border px-4 h-10 rounded-full outline-none">
@@ -119,7 +119,7 @@ function Navbar() {
             )}
           </Popover>
 
-          <button className="flex items-center justify-center border h-10 w-10 rounded-full transition-all">
+          <button className="flex items-center justify-center border h-10 w-10 rounded-full hover:shadow-xl transition-all">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -136,7 +136,7 @@ function Navbar() {
             </svg>
           </button>
 
-          <button className="flex items-center justify-center border h-10 w-10 rounded-full transition-all">
+          <button className="flex items-center justify-center border h-10 w-10 rounded-full hover:shadow-xl transition-all">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -152,7 +152,7 @@ function Navbar() {
               />
             </svg>
           </button>
-          <button className="flex items-center justify-center border h-10 w-10 rounded-full transition-all">
+          <button className="flex items-center justify-center border h-10 w-10 rounded-full hover:shadow-xl transition-all">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
