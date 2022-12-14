@@ -1,12 +1,13 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
-
+import React, { useState, useEffect } from "react";
 import { Popover, Transition } from "@headlessui/react";
 
 function Navbar() {
+  const [navOpen, setNavOpen] = useState(false);
+
   return (
-    <div>
-      <div className="bg-white h-16 lg:h-20 border-b flex items-center px-5 lg:px-20">
+    <div className="sticky inset-x-0 top-0 bg-white border-b">
+      <div className="bg-white h-16 lg:h-20  flex items-center px-5 lg:px-20">
         <img
           src="https://cdn-icons-png.flaticon.com/512/5838/5838024.png"
           alt=""
@@ -49,7 +50,10 @@ function Navbar() {
               />
             </svg>
           </button>
-          <button className="h-10 w-10 rounded-full bg-stone-100 flex items-center justify-center">
+          <button
+            onClick={() => setNavOpen(!navOpen)}
+            className="h-10 w-10 rounded-full bg-stone-100 flex items-center justify-center"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -170,7 +174,16 @@ function Navbar() {
           </button>
         </div>
       </div>
-      <div></div>
+      <div
+        className={`h-0 ${navOpen && "h-32"} transition-all overflow-hidden`}
+      >
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam
+          ratione consequatur fugiat voluptatibus necessitatibus voluptate ab
+          eligendi quo enim eaque, aperiam nemo. Quibusdam rerum eveniet
+          praesentium pariatur debitis nihil voluptatibus.
+        </p>
+      </div>
     </div>
   );
 }
