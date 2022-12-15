@@ -18,7 +18,7 @@ function Navbar() {
           <h1 className="text-stone-900 lg:text-xl">Notes</h1>
         </div>
         <div className="flex items-center space-x-4 ml-auto lg:hidden">
-          <button className="h-16 w-16 text-stone-700 shadow-xl active:shadow-none active:translate-y-1 shadow-stone-200 rounded-full flex items-center justify-center fixed bottom-7 right-6 bg-white border transition-all">
+          <button className="h-16 w-16 text-stone-700 shadow-xl active:shadow-none active:translate-y-1 shadow-stone-200 rounded-full flex items-center justify-center fixed bottom-7 right-6 bg-white border transition-all duration-100">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
