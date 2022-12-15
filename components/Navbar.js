@@ -34,7 +34,7 @@ function Navbar() {
               />
             </svg>
           </button>
-          <button className="h-9 w-9 rounded-full bg-stone-100 flex items-center justify-center">
+          <button className="h-10 w-10 rounded-full bg-stone-100 flex items-center justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -50,7 +50,7 @@ function Navbar() {
               />
             </svg>
           </button>
-          <button className="h-9 w-9 rounded-full bg-stone-100 flex items-center justify-center">
+          <button className="h-10 w-10 rounded-full bg-stone-100 flex items-center justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -68,7 +68,7 @@ function Navbar() {
           </button>
           <button
             onClick={() => setNavOpen(!navOpen)}
-            className="h-9 w-9 rounded-full bg-stone-100 flex items-center justify-center"
+            className="h-10 w-10 rounded-full bg-stone-100 flex items-center justify-center"
           >
             {navOpen ? (
               <svg
