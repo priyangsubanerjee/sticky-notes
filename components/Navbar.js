@@ -34,14 +34,14 @@ function Navbar() {
               />
             </svg>
           </button>
-          <button className="h-10 w-10 rounded-full bg-stone-100 flex items-center justify-center">
+          <button className="h-9 w-9 rounded-full bg-stone-100 flex items-center justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="currentColor"
-              class="w-6 h-6"
+              class="w-5 h-5"
             >
               <path
                 stroke-linecap="round"
@@ -50,9 +50,25 @@ function Navbar() {
               />
             </svg>
           </button>
+          <button className="h-9 w-9 rounded-full bg-stone-100 flex items-center justify-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-5 h-5"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
+              />
+            </svg>
+          </button>
           <button
             onClick={() => setNavOpen(!navOpen)}
-            className="h-10 w-10 rounded-full bg-stone-100 flex items-center justify-center"
+            className="h-9 w-9 rounded-full bg-stone-100 flex items-center justify-center"
           >
             {navOpen ? (
               <svg
@@ -61,7 +77,7 @@ function Navbar() {
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="w-6 h-6"
+                class="w-5 h-5"
               >
                 <path
                   stroke-linecap="round"
@@ -76,7 +92,7 @@ function Navbar() {
                 viewBox="0 0 24 24"
                 stroke-width="1.5"
                 stroke="currentColor"
-                class="w-6 h-6"
+                class="w-5 h-5"
               >
                 <path
                   stroke-linecap="round"
@@ -193,35 +209,16 @@ function Navbar() {
       </div>
       <div
         className={`h-0 ${
-          navOpen && "h-48"
+          navOpen && "h-44"
         } transition-all overflow-hidden px-5`}
       >
-        <ul className="text-sm space-y-2 mt-2">
+        <ul className="text-sm space-y-3 mt-2">
           <li>All notes</li>
           <li>Red</li>
           <li>Blue</li>
           <li>Green</li>
           <li>Pink</li>
         </ul>
-        <div className="flex items-center justify-end">
-          <div className="flex items-center border rounded-full px-4 py-2 bg-stone-50">
-            <span className="text-sm mr-4">Account</span>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-5 h-5"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z"
-              />
-            </svg>
-          </div>
-        </div>
       </div>
     </div>
   );
