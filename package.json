@@ -20,7 +20,8 @@
     "react-dom": "18.2.0",
     "react-hot-toast": "^2.4.0",
     "react-linkify": "^1.0.0-alpha",
-    "react-reveal": "^1.2.2"
+    "react-reveal": "^1.2.2",
+    "tailwind-scrollbar-hide": "^1.1.7"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

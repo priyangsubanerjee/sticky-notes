@@ -1,193 +1,67 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useState, useEffect } from "react";
-import { Popover, Transition } from "@headlessui/react";
+import React from "react";
 
 function Navbar() {
-  const [navOpen, setNavOpen] = useState(false);
-
   return (
-    <div className="sticky inset-x-0 top-0 bg-white border-b">
-      <div className="bg-white h-16 lg:h-20  flex items-center px-5 lg:px-20">
-        <img
-          src="https://cdn-icons-png.flaticon.com/512/5838/5838024.png"
-          alt=""
-          className="h-10 lg:h-12"
-        />
-        <div className="flex items-center space-x-1 ml-3 lg:ml-4 text-lg">
-          <h1 className="font-semibold lg:text-xl">Sticky</h1>
-          <h1 className="text-stone-900 lg:text-xl">Notes</h1>
-        </div>
-        <div className="flex items-center space-x-4 ml-auto lg:hidden">
-          <button className="h-16 w-16 text-stone-700 shadow-xl active:shadow-none active:translate-y-1 shadow-stone-200 rounded-full flex items-center justify-center fixed bottom-7 right-6 bg-white border transition-all duration-100">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-7 h-7"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 4.5v15m7.5-7.5h-15"
-              />
-            </svg>
-          </button>
-          <button className="h-10 w-10 rounded-full bg-stone-100 flex items-center justify-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-              />
-            </svg>
-          </button>
-
-          <button
-            onClick={() => setNavOpen(!navOpen)}
-            className="h-10 w-10 rounded-full bg-stone-100 flex items-center justify-center"
+    <div>
+      <div className="hidden grid-cols-3 place-content-center px-5 mt-5">
+        <div></div>
+        <div className="text-2xl flex items-center justify-center">Tasks</div>
+        <div className="flex items-center justify-end">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-8 h-8"
           >
-            {navOpen ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-6 h-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            ) : (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-6 h-6"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-                />
-              </svg>
-            )}
-          </button>
-        </div>
-        <div className="hidden lg:flex items-center ml-auto space-x-5">
-          <Popover className="relative hover:shadow-xl transition-all rounded-full">
-            {({ open }) => (
-              <>
-                <Popover.Button className="flex items-center border px-4 h-10 rounded-full outline-none">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class={`w-4 h-4 mr-2 ${
-                      open && "rotate-180"
-                    } transition-all duration-500`}
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                    />
-                  </svg>
-
-                  <span className="text-sm">All notes</span>
-                </Popover.Button>
-                <Popover.Panel className="absolute top-12 left-1/2 transform -translate-x-1/2  border bg-white w-40 rounded">
-                  <ul className="text-sm">
-                    <li>
-                      <Popover.Button className="px-4 py-3 border-b text-left w-full">
-                        All notes
-                      </Popover.Button>
-                    </li>
-                    <li>
-                      <Popover.Button className="px-4 py-3 border-b text-left w-full">
-                        Red
-                      </Popover.Button>
-                    </li>
-                    <li className="px-4 py-3 border-b">
-                      <Popover.Button>Blue</Popover.Button>
-                    </li>
-                    <li className="px-4 py-3 border-b">
-                      <Popover.Button>Green</Popover.Button>
-                    </li>
-                    <li>
-                      <Popover.Button className="px-4 py-3 w-full text-left">
-                        Pink
-                      </Popover.Button>
-                    </li>
-                  </ul>
-                </Popover.Panel>
-              </>
-            )}
-          </Popover>
-
-          <button className="flex items-center justify-center border h-10 w-10 rounded-full hover:shadow-xl transition-all">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-5 h-5"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z"
-              />
-            </svg>
-          </button>
-
-          <button className="flex items-center justify-center border h-10 w-10 rounded-full hover:shadow-xl transition-all">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="w-5 h-5"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M12 4.5v15m7.5-7.5h-15"
-              />
-            </svg>
-          </button>
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
+            />
+          </svg>
         </div>
       </div>
-      <div
-        className={`h-0 ${
-          navOpen && "h-44"
-        } transition-all overflow-hidden px-5`}
-      >
-        <ul className="text-sm space-y-3 mt-2">
-          <li>All notes</li>
-          <li>Red</li>
-          <li>Blue</li>
-          <li>Green</li>
-          <li>Pink</li>
-        </ul>
+      <div className="border-b text-neutral-400 border-neutral-600 flex items-center px-5 space-x-8 overflow-auto scrollbar-hide pr-5">
+        <button className="py-4 shrink-0 font-medium">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-6 h-6"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.007 5.404.433c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.433 2.082-5.006z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </button>
+        <button className="py-4 shrink-0 font-medium text-blue-300 border-b border-b-blue-300">
+          To do
+        </button>
+        <button className="py-4 shrink-0 font-medium flex items-center space-x-2">
+          <i class="bi bi-circle-fill text-[9px] text-red-300"></i>
+          <span>Red</span>
+        </button>
+        <button className="py-4 shrink-0 font-medium flex items-center space-x-2">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            class="w-4 h-4"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M12 3.75a.75.75 0 01.75.75v6.75h6.75a.75.75 0 010 1.5h-6.75v6.75a.75.75 0 01-1.5 0v-6.75H4.5a.75.75 0 010-1.5h6.75V4.5a.75.75 0 01.75-.75z"
+              clip-rule="evenodd"
+            />
+          </svg>
+
+          <span>New list</span>
+        </button>
       </div>
     </div>
   );
