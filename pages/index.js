@@ -14,7 +14,6 @@ export default function Home() {
         <title>Sticky notes</title>
         <link rel="icon" href="/logo.png" />
       </Head>
-      <Navbar />
     </div>
   );
 }
