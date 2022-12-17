@@ -97,7 +97,7 @@ function Navbar() {
         </div>
       </div>
       <div className="flex lg:hidden px-5 h-12 mt-4">
-        <div className="bg-slate-50 rounded-full w-full flex items-center px-5 text-slate-700 justify-between">
+        <div className="bg-slate-100 rounded-full w-full flex items-center px-5 text-slate-700 justify-between">
           <button>
             <svg
               xmlns="http://www.w3.org/2000/svg"
