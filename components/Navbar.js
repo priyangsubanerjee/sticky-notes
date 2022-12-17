@@ -3,7 +3,7 @@ import React from "react";
 
 function Navbar() {
   return (
-    <div className="mt-2 lg:mt-0">
+    <div className="pt-2 lg:pt-0">
       {/* Navbar */}
 
       <div className="h-16 border-b hidden lg:flex items-center px-5 lg:px-16 text-neutral-800">
@@ -164,7 +164,7 @@ function Navbar() {
         </div>
       </div>
 
-      <button className="flex items-center justify-center fixed bottom-6 right-6 h-16 w-16 bg-neutral-100 text-neutral-800 shadow-md active:shadow-none active:translate-y-1 transition-all rounded-full">
+      <button className="flex items-center justify-center fixed bottom-10 right-6 h-16 w-16 bg-sky-100 text-neutral-800 shadow-md active:shadow-none active:translate-y-1 transition-all rounded-full">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
