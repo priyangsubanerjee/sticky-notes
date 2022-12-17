@@ -3,7 +3,9 @@ import React from "react";
 
 function Navbar() {
   return (
-    <div>
+    <div className="mt-4 lg:mt-0">
+      {/* Navbar */}
+
       <div className="h-16 border-b hidden lg:flex items-center px-5 lg:px-16 text-neutral-800">
         <button>
           <svg
@@ -21,7 +23,11 @@ function Navbar() {
             />
           </svg>
         </button>
-        <div className="h-11 w-[600px] bg-slate-100 flex items-center mx-auto rounded-md px-5">
+        <div className="ml-5 flex items-center">
+          <img src="/logo.png" alt="" className="h-10" />
+          <h1 className="font-opensans ml-2">Skicky notes</h1>
+        </div>
+        <div className="h-11 w-[600px] bg-neutral-100 flex items-center mx-auto rounded-md px-5">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -45,8 +51,8 @@ function Navbar() {
             className="h-full w-full outline-none bg-transparent ml-4"
           />
         </div>
-        <div className="ml-auto space-x-9 flex items-center">
-          <button>
+        <div className="ml-auto space-x-5 flex items-center text-neutral-700">
+          <button className="h-11 w-11 hover:bg-neutral-100 rounded-full flex items-center justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -62,7 +68,7 @@ function Navbar() {
               />
             </svg>
           </button>
-          <button>
+          <button className="h-11 w-11 hover:bg-neutral-100 rounded-full flex items-center justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -78,7 +84,7 @@ function Navbar() {
               />
             </svg>
           </button>
-          <button>
+          <button className="h-11 w-11 hover:bg-neutral-100 rounded-full flex items-center justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -96,9 +102,12 @@ function Navbar() {
           </button>
         </div>
       </div>
-      <div className="flex lg:hidden px-5 h-12 mt-4">
-        <div className="bg-slate-100 rounded-full w-full flex items-center px-5 text-slate-700 justify-between">
-          <button>
+
+      {/* Mobile Navbar */}
+
+      <div className="flex lg:hidden px-5 h-12">
+        <div className="bg-neutral-100 rounded-full w-full flex items-center px-2 text-slate-700 justify-between">
+          <button className="h-9 w-9 active:bg-neutral-200 rounded-full flex items-center justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -115,7 +124,7 @@ function Navbar() {
             </svg>
           </button>
           <span>Search in Notes</span>
-          <button>
+          <button className="h-9 w-9 active:bg-neutral-200 rounded-full flex items-center justify-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
