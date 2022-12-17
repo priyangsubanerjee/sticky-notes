@@ -10,10 +10,6 @@ export default function Home() {
 
   return (
     <div>
-      <Head>
-        <title>Sticky notes</title>
-        <link rel="icon" href="/logo.png" />
-      </Head>
       <Navbar />
     </div>
   );
