@@ -3,7 +3,7 @@ import React from "react";
 
 function Navbar() {
   return (
-    <div className="pt-2 lg:pt-0">
+    <div className="pt-2 lg:pt-0 sticky top-0 left-0 right-0">
       {/* Navbar */}
 
       <div className="h-16 border-b hidden lg:flex items-center px-5 lg:px-16 text-neutral-800">
