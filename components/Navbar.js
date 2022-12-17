@@ -6,15 +6,22 @@ function Navbar() {
     <div>
       <div className="px-5 h-16 flex items-center justify-between border-b">
         <div>
-          <img
-            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fA%3D%3D&w=1000&q=80"
-            className="h-9 w-9 rounded-full object-cover"
-            alt=""
-          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="w-7 h-7"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
+            />
+          </svg>
         </div>
-        <div className="font-semibold text-lg text-neutral-800">
-          All documents
-        </div>
+        <div className="font-semibold text-lg text-neutral-800">टिप्पणियाँ</div>
         <button>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -22,7 +29,7 @@ function Navbar() {
             viewBox="0 0 24 24"
             stroke-width="1.5"
             stroke="currentColor"
-            class="w-6 h-6"
+            class="w-7 h-7"
           >
             <path
               stroke-linecap="round"
@@ -32,7 +39,7 @@ function Navbar() {
           </svg>
         </button>
       </div>
-      <div className="fixed w-full h-14 px-10 flex items-center justify-between border-t inset-x-0 bottom-0">
+      <div className="fixed w-full h-14 px-12 flex items-center justify-between border-t inset-x-0 bottom-0 text-neutral-800">
         <button>
           <svg
             xmlns="http://www.w3.org/2000/svg"
